@@ -1,75 +1,138 @@
-# React + TypeScript + Vite
+# 🐉 Dragon Ball Premium Landing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto desarrollado para el curso de **Desarrollo de Aplicaciones Empresariales (DAE)** utilizando **React 19**, **Vite**, **TypeScript**, **Tailwind CSS v4** y **shadcn/ui**.
 
-Currently, two official plugins are available:
+El objetivo fue construir una landing page moderna inspirada en el universo de Dragon Ball, aplicando buenas prácticas de desarrollo frontend, diseño responsivo y componentización.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# 📸 Evidencias del Desarrollo
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 1️⃣ Proyecto Vite Inicial
 
-Note: This will impact Vite dev & build performances.
+Creación del proyecto base utilizando React + Vite + TypeScript.
 
-## Expanding the ESLint configuration
+![Proyecto Vite Inicial](docs/01-vite-default.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 2️⃣ Código Base React
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Implementación inicial de la aplicación y configuración de la estructura principal del proyecto.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+![Código Base React](docs/02-codigo-react.png)
+
+---
+
+## 3️⃣ Integración de shadcn/ui
+
+Configuración e implementación de componentes modernos utilizando la librería shadcn/ui.
+
+![Integración shadcn](docs/03-shadcn-button.png)
+
+---
+
+## 4️⃣ Landing Page Premium Final
+
+Resultado final del proyecto con diseño moderno inspirado en Dragon Ball, utilizando componentes reutilizables, efectos visuales y una interfaz atractiva.
+
+![Landing Premium Final](docs/04-landing-premium.png)
+
+---
+
+# 🛠️ Tecnologías Utilizadas
+
+| Tecnología | Versión |
+|------------|----------|
+| React | 19 |
+| Vite | 8 |
+| TypeScript | 6 |
+| Tailwind CSS | 4 |
+| shadcn/ui | 4 |
+| ESLint | 10 |
+
+---
+
+# 🚀 Instalación
+
+### Clonar repositorio
+
+```bash
+git clone https://github.com/JasonGomezzz/lab13-DAE.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Ingresar al proyecto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd lab13-DAE
 ```
+
+### Instalar dependencias
+
+```bash
+npm install
+```
+
+### Ejecutar proyecto
+
+```bash
+npm run dev
+```
+
+---
+
+# 📁 Estructura del Proyecto
+
+```text
+src/
+├── components/
+│   ├── ui/
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── badge.tsx
+│   │   ├── avatar.tsx
+│   │   ├── tabs.tsx
+│   │   └── otros componentes shadcn
+│
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── Characters.tsx
+│   ├── DragonBalls.tsx
+│   ├── Transformations.tsx
+│   ├── Timeline.tsx
+│   ├── Gallery.tsx
+│   ├── Stats.tsx
+│   ├── CTA.tsx
+│   └── Footer.tsx
+│
+├── lib/
+│   ├── utils.ts
+│   ├── dbz.ts
+│   └── dragonball.ts
+│
+├── App.tsx
+└── main.tsx
+```
+
+---
+
+# ✨ Funcionalidades Implementadas
+
+- Configuración de React + Vite + TypeScript.
+- Integración de Tailwind CSS v4.
+- Implementación de componentes shadcn/ui.
+- Diseño responsivo.
+- Landing page temática de Dragon Ball.
+- Componentización reutilizable.
+- Buenas prácticas de desarrollo frontend.
+- Estructura escalable para futuros módulos.
+
+---
+
+# 👨‍💻 Autor
+
+**Jason Gomez**
+
+Desarrollo de Aplicaciones Empresariales (DAE)
+
+Tecsup - 2026

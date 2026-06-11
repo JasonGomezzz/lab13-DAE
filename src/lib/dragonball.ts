@@ -53,7 +53,7 @@ export type DragonBallOrb = {
 const API = "https://dragonball-api.com"
 
 export function asset(path: string) {
-  return encodeURI(`${API}${path}`)
+  return `${API}${path}`
 }
 
 export const navLinks: NavLink[] = [
