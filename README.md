@@ -1,75 +1,104 @@
-# React + TypeScript + Vite
+# 🐉 Dragon Ball
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> App web construida con React 19 + Vite + TypeScript + shadcn/ui que consume la API pública de Dragon Ball.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Documentación visual
 
-## React Compiler
+### 1. Proyecto Vite predeterminado
+![Vite default](./screenshots/01-vite-default.png)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### 2. Configuración de Tailwind
+![Tailwind import](./screenshots/02-tailwind-import.png)
 
-Note: This will impact Vite dev & build performances.
+### 3. Diseño minimalista
+![Diseño minimalista](./screenshots/03-design-minimal.png)
 
-## Expanding the ESLint configuration
+### 4. Título + Button de shadcn
+![Button import](./screenshots/04-button-import.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 5. Proyecto rediseñado
+![Proyecto rediseñado](./screenshots/05-redesign.png)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Tecnología | Versión |
+|---|---|
+| React + React Compiler | 19 / 1.0.0 |
+| Vite | 8 |
+| TypeScript | 6 |
+| React Router | 7 |
+| shadcn/ui | 4 |
+| Tailwind CSS | 4 |
+
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/JasonGomezzz/lab13-DAE.git
+cd dragonball
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── ui/              # Card, Badge, Button, Tabs... (shadcn)
+│   └── NavBar.tsx
+├── hooks/
+│   ├── useCharacters.ts
+│   ├── useCharacterDetail.ts
+│   └── usePlanets.ts
+├── pages/
+│   ├── Home.tsx
+│   ├── Characters.tsx
+│   ├── CharacterDetail.tsx
+│   └── Planets.tsx
+├── types/
+│   └── dragonball.ts
+└── screenshots/
+    ├── 01-vite-default.png
+    ├── 02-tailwind-import.png
+    ├── 03-design-minimal.png
+    ├── 04-button-import.png
+    └── 05-redesign.png
+```
+
+---
+
+## 🌐 API
+
+`https://dragonball-api.com/api`
+
+| Endpoint | Descripción |
+|---|---|
+| `GET /characters?limit=12&page=1` | Listado paginado de personajes |
+| `GET /characters/:id` | Detalle + transformaciones |
+| `GET /planets?limit=12&page=1` | Listado paginado de planetas |
+
+---
+
+## 🗺️ Routes
+
+| Path | Descripción |
+|---|---|
+| `/` | Onboarding de bienvenida |
+| `/characters` | Grid de personajes con paginación |
+| `/characters/:id` | Detalle + transformaciones |
+| `/planets` | Grid de planetas con paginación |
+
+---
+
+## 👤 Autor
+
+**Diego Nina**  
+Tecsup — Desarrollo de Aplicaciones Web
