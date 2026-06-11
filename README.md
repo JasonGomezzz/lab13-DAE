@@ -101,4 +101,4 @@ src/
 ## 👤 Autor
 
 **Diego Nina**  
-Tecsup — Desarrollo de Aplicaciones Web
+Tecsup — Desarrollo de Aplicaciones Empresariales
